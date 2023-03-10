@@ -36,8 +36,29 @@ Au départ, on a une grille contenant 2 valeurs prises dans {2,4}.
 L’utilisateur doit alors faire bouger les tuiles, jusqu’au « mur », vers la gauche, la droite, le haut ou le bas, ce déplacement implique un nombre fini d'additions de tuiles. Et suite à un de ces déplacement, une des tuiles vides prend la valeur 2 ou 4 de manière aléatoire.
 Le jeu se termine si aucun déplacement ne peut faire évoluer la grille.
 
-__Déplacement vers la gauche :__
+__Déplacement :__
+- 1) à gauche :
 Tout d'abord, on observe ligne par ligne, et on déplace tous les entiers non nuls, jusqu’au « mur », vers la gauche.
 Ensuite, on additionne deux tuiles, en partant de la gauche, si et seulement si elles ont la même valeur.
 - Par exemple :
 [2, 0, 2, 2] -> [2, 2, 2, 0] -> [4, 2, 0, 0]
+
+- 2 ) à droite 
+de même en considérant la valeur aléatoire
+
+- Ce qui nous donne l'algorithme suivant :
+Si a = b Alors
+  Si c = d Alors
+    La ligne devient [ 2 * a , 2 * c , 0 , 0 ] 
+  Sinon (c!=d)
+    La ligne devient [ 2* a , c , d , 0 ] 
+Sinon ( cas a != b )
+  Si b = c 
+    Alors
+    La ligne devient [ a , 2 * b , d , 0 ] 
+  Sinon ( cas b != c )
+    Si c = d 
+      Alors
+      La ligne devient [ a , b , 2 * c , 0 ] 
+    Sinon ( cas c != d )
+      La ligne devient [ a , b , c , d ]

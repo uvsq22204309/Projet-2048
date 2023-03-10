@@ -46,19 +46,17 @@ Ensuite, on additionne deux tuiles, en partant de la gauche, si et seulement si 
 - 2 ) à droite 
 de même en considérant la valeur aléatoire
 
-- Ce qui nous donne l'algorithme suivant :
+__Donc ce qui nous donne l'algorithme suivant :__
 - Si a = b Alors
   - Si c = d Alors
     - La ligne devient [ 2 * a , 2 * c , 0 , 0 ] 
   - Sinon (c!=d)
     - La ligne devient [ 2* a , c , d , 0 ] 
 - Sinon ( cas a != b )
-  - Si b = c 
-    - Alors
+  - Si b = c alors
     - La ligne devient [ a , 2 * b , d , 0 ] 
   - Sinon ( cas b != c )
-    - Si c = d 
-      - Alors
+    - Si c = d alors
       - La ligne devient [ a , b , 2 * c , 0 ] 
     - Sinon ( cas c != d )
       - La ligne devient [ a , b , c , d ]

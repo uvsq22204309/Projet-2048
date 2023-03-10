@@ -1,9 +1,9 @@
 # Projet-2048
 
-Bienvenue sur le projet 2048
-auteurs : Dorian Le Guillou, Anaé ratabouil, William Dang
-L1 MI TD2
-2022/2023
+Bienvenue sur le projet 2048 !
+- auteurs : Dorian Le Guillou, Anaé ratabouil, William Dang
+- L1 MI TD2
+- 2022/2023
 
 Pour mener à bien la réalisation de ce projet nous allons suivre le plan suivant : 
 
@@ -23,8 +23,6 @@ Pour mener à bien la réalisation de ce projet nous allons suivre le plan suiva
   - afficher score
   - déplacer vers le haut, bas, gauche, droit avec les touches :
     - Z pour haut, Q pour gauche, S pour bas, D pour droite (clavier azerty)
-
-
 
 optionel :
 - couleur

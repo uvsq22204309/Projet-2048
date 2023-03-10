@@ -47,16 +47,16 @@ Ensuite, on additionne deux tuiles, en partant de la gauche, si et seulement si 
 de même en considérant la valeur aléatoire
 
 __Donc ce qui nous donne l'algorithme suivant :__
-- Si a = b Alors
-  - Si c = d Alors
-    - La ligne devient [ 2 * a , 2 * c , 0 , 0 ] 
-  - Sinon (c!=d)
-    - La ligne devient [ 2* a , c , d , 0 ] 
+- Si a = b
+  - Si c = d
+    - La ligne devient [2 * a ,2 * c ,0 ,0] 
+  - Sinon (c différent de d)
+    - La ligne devient [2* a,c ,d , 0] 
 - Sinon ( cas a != b )
-  - Si b = c alors
-    - La ligne devient [ a , 2 * b , d , 0 ] 
-  - Sinon ( cas b != c )
-    - Si c = d alors
-      - La ligne devient [ a , b , 2 * c , 0 ] 
-    - Sinon ( cas c != d )
-      - La ligne devient [ a , b , c , d ]
+  - Si b = c
+    - La ligne devient [a , 2 * b ,d ,0] 
+  - Sinon ( b différent de c )
+    - Si c = d
+      - La ligne devient [a , b, 2 * c, 0] 
+    - Sinon ( c différent d )
+      - La ligne devient [a, b, c, d]

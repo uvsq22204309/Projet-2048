@@ -37,7 +37,7 @@ L’utilisateur doit alors faire bouger les tuiles, jusqu’au « mur », vers l
 Le jeu se termine si aucun déplacement ne peut faire évoluer la grille.
 
 __Déplacement :__
-- 1) à gauche :
+1) à gauche :
 Tout d'abord, on observe ligne par ligne, et on déplace tous les entiers non nuls, jusqu’au « mur », vers la gauche.
 Ensuite, on additionne deux tuiles, en partant de la gauche, si et seulement si elles ont la même valeur.
 - Par exemple :

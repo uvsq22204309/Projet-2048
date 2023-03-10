@@ -43,7 +43,7 @@ Ensuite, on additionne deux tuiles, en partant de la gauche, si et seulement si 
 - Par exemple :
 [2, 0, 2, 2] -> [2, 2, 2, 0] -> [4, 2, 0, 0]
 
-- 2 ) à droite 
+2) à droite, en haut, au bas
 de même en considérant la valeur aléatoire
 
 __Donc ce qui nous donne l'algorithme suivant :__

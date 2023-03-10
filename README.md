@@ -29,3 +29,8 @@ Pour mener à bien la réalisation de ce projet nous allons suivre le plan suiva
 optionel :
 - couleur
 - coder une AI
+
+Pour gérer le déplacement :
+Tout d'abord, on observe ligne par ligne, et on déplace tous les entiers non nuls, jusqu’au « mur », vers la gauche.
+Ensuite, on additionne deux tuiles, en partant de la gauche, si et seulement si elles ont la même valeur.
+[2, 0, 2, 2] -> [2, 2, 2, 0] -> [4, 2, 0, 0]

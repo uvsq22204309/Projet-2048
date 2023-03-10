@@ -30,7 +30,7 @@ optionel :
 - couleur
 - coder une AI
 
-Déroulement du jeu :
+__Déroulement du jeu :__
 Au départ, on a une grille contenant 2 valeurs prises dans {2,4}. 
 L’utilisateur doit alors faire bouger les tuiles, jusqu’au « mur », vers la gauche, la droite, le haut ou le bas, ce déplacement implique un nombre fini d'additions de tuiles. Et suite à un de ces déplacement, une des tuiles vides prend la valeur 2 ou 4 de manière aléatoire.
 Le jeu se termine si aucun déplacement ne peut faire évoluer la grille.

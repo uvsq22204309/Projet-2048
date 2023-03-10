@@ -28,6 +28,9 @@ optionel :
 - couleur
 - coder une AI
 
+__Structure :__
+La grille de jeu se présente sous la forme d'un tableau à deux dimensions avec 4 lignes et 4 colonnes. Les éléments sont des puissances de 2 (au moins égales à 2) ou 0 si la tuile est vide.
+
 __Déroulement du jeu :__
 Au départ, on a une grille contenant 2 valeurs prises dans {2,4}. 
 L’utilisateur doit alors faire bouger les tuiles, jusqu’au « mur », vers la gauche, la droite, le haut ou le bas, ce déplacement implique un nombre fini d'additions de tuiles. Et suite à un de ces déplacement, une des tuiles vides prend la valeur 2 ou 4 de manière aléatoire.

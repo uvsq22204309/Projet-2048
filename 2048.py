@@ -38,21 +38,40 @@ for i in range(4):
 '''for carre in liste_carre:
     print("Rectangle {} à pour coord {}".format(carre, canvas.coords(carre)))
 '''
-print(liste_carre)
 
+liste_carre_disponible = [i for i in liste_carre]
 #Apparition aléatoire d'un 2
+def nouvelle_case(nb):
+    for i in range(nb):
 
-x =liste_carre[rd.randint(0,15)][0]
-y = liste_carre[rd.randint(0,15)][2]
+        nb_aleatoire = rd.randint(0, len(liste_carre_disponible)-1)
+        x = liste_carre_disponible[nb_aleatoire][0]
+        y = liste_carre_disponible[nb_aleatoire][2]
 
-canvas.create_text(x+(taille_case/2), y-(taille_case/2), text="2", fill="red", font=("Arial", 24, "bold"))
+        liste_valeur_aleatoire = [2 for i in range(9)]
+        liste_valeur_aleatoire.append(4)
+        valeur_aleatoire = rd.choice(liste_valeur_aleatoire)
+        print(valeur_aleatoire)
+        
+        r_nb, g_nb, b_nb = 119,110,101
+        color_nb = f'#{r_nb:02x}{g_nb:02x}{b_nb:02x}'
+
+        if valeur_aleatoire == 2:  
+            r, g, b = 238,228,218
+            color = f'#{r:02x}{g:02x}{b:02x}'
+            canvas.create_text(x+(taille_case/2), y-(taille_case/2), text=valeur_aleatoire, fill=color_nb, font=("Arial", 24, "bold"))
+            #canvas.create_rectangle(liste_carre_disponible[nb_aleatoire][0],liste_carre_disponible[nb_aleatoire][2],liste_carre_disponible[nb_aleatoire][3],liste_carre_disponible[nb_aleatoire][3], fill=color)
+        elif valeur_aleatoire == 4:
+            canvas.create_text(x+(taille_case/2), y-(taille_case/2), text=valeur_aleatoire, fill=color_nb, font=("Arial", 24, "bold"))
+
+        print(liste_carre_disponible[nb_aleatoire])
+        liste_carre_disponible.remove(liste_carre_disponible[nb_aleatoire])
 
 # Ajouter le canevas à la fenêtre
 canvas.pack()
 
-#Défintion des mouvements
+#Execution des définitions:
+nouvelle_case(2)
 
 # Lancer la boucle principale de la fenêtre
 fenetre.mainloop()
-
-

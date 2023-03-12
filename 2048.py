@@ -1,9 +1,28 @@
+"""
+##########################################
+
+Projet 2048
+L1 MI TD2
+2022/2023
+Dorian Le Guillou, Anaé ratabouil, William Dang
+
+##########################################
+"""
+# importation des modules
 import tkinter as tk
 import random as rd
 
 # Création d'une fenêtre et de son nom
 fenetre = tk.Tk()
 fenetre.title(2048)
+
+label_title = tk.Label(fenetre, text = "2048", font = ("Courrier", 20), bg = "#ECCE0F", fg = "#FFFFFF")
+label_title.pack()
+
+# Personnalisation de la fenêtre
+fenetre.geometry("500x500") #taille de base
+fenetre.iconbitmap("2048Icon.ico") #ajout du logo
+fenetre.config(background="#FFDD33") # couleur brun, code héxadécimal
 
 #Définiton longeur case
 taille_case = 100

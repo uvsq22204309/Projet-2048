@@ -1,11 +1,9 @@
 """
 ##########################################
-
 Projet 2048
 L1 MI TD2
 2022/2023
 Dorian Le Guillou, Anaé ratabouil, William Dang
-
 ##########################################
 """
 # importation des modules
@@ -21,7 +19,7 @@ label_title.pack()
 
 # Personnalisation de la fenêtre
 fenetre.geometry("500x500") #taille de base
-fenetre.iconbitmap("2048Icon.ico") #ajout du logo
+fenetre.iconbitmap('2048/2048Icon.ico') #ajout du logo
 fenetre.config(background="#FFDD33") # couleur brun, code héxadécimal
 
 #Définiton longeur case

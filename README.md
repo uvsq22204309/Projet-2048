@@ -1,7 +1,7 @@
 # Projet-2048
 
 Bienvenue sur le projet 2048 !
-- auteurs : Dorian Le Guillou, Anaé ratabouil, William Dang
+- auteurs : Dorian Le Guillou, Anaé Ratabouil, William Dang
 - L1 MI TD2
 - 2022/2023
 

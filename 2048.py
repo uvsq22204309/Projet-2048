@@ -4,13 +4,14 @@
 Projet 2048
 L1 MI TD2
 2022/2023
-Dorian Le Guillou, Anaé ratabouil, William Dang
+Dorian Le Guillou, Anaé Ratabouil, William Dang
 
 ##########################################
 """
 # importation des modules
 import tkinter as tk
 import random as rd
+import keyboard
 
 # Création d'une fenêtre et de son nom
 fenetre = tk.Tk()
@@ -86,10 +87,24 @@ def nouvelle_case(nb):
         print(liste_carre_disponible[nb_aleatoire])
         liste_carre_disponible.remove(liste_carre_disponible[nb_aleatoire])
 
+# La fonction qui détermine la direction
+def determine_direction():
+    if keyboard.is_pressed('d'):
+        return 'droite'
+    if keyboard.is_pressed('q'):
+        return 'gauche'
+    if keyboard.is_pressed('z'):
+        return 'haut'
+    if keyboard.is_pressed('s'):
+        return 'bas'
+
+direction = determine_direction()
+print(direction)
+
 # Ajouter le canevas à la fenêtre
 canvas.pack()
 
-#Execution des définitions:
+# Execution des définitions:
 nouvelle_case(2)
 
 # Lancer la boucle principale de la fenêtre

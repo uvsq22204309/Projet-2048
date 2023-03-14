@@ -88,6 +88,7 @@ def nouvelle_case(nb):
         liste_carre_disponible.remove(liste_carre_disponible[nb_aleatoire])
 
 # La fonction qui détermine la direction
+#?
 def determine_direction():
     if keyboard.is_pressed('d'):
         return 'droite'
@@ -109,3 +110,5 @@ nouvelle_case(2)
 
 # Lancer la boucle principale de la fenêtre
 fenetre.mainloop()
+
+

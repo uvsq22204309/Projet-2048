@@ -13,6 +13,7 @@ import tkinter as tk
 import random as rd
 import keyboard
 
+
 # Création d'une fenêtre et de son nom
 fenetre = tk.Tk()
 fenetre.title('2048')
@@ -42,6 +43,27 @@ score_label.pack()
 #Listes pour stocker les carrées
 liste_carre = []
 liste_carre_disponible = []
+
+# dictionnaire des couleurs en héxadécimal
+colors = {
+        2 : "#A7A7A7",
+        4 : "#DCD781",
+        8 : "#F3A246",
+        16 : "#F7721C",
+        32 : "#F7441C",
+        64 : "#F72D1C",
+        128 : "#DEDB0A",
+        256 : "#EFEC0B",
+        512 : "#FFD903",
+        1024 : "#E0C841",
+        2048 : "#FFFB00",
+        4096: "#707066",
+        8192: "#5A5A51",
+        16384: "#44443D",
+        32768: "#34342E",
+        65536: "#272723",
+        131072: "#131311",
+        }
 
 #La fonction qui augmente le score
 def augmenter_score():

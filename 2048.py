@@ -11,7 +11,6 @@ Dorian Le Guillou, Anaé Ratabouil, William Dang
 # importation des modules
 import tkinter as tk
 import random as rd
-import keyboard
 
 
 # Création d'une fenêtre et de son nom
@@ -72,8 +71,24 @@ def augmenter_score():
     score_label.config(text="Score : " + str(score))
 
 def haut():
-    "fonction qui déplace les tuiles vers le haut"
-    pass
+    for i in range(len(liste_carre_indisponible)):
+        if liste_carre_indisponible[i][0] != 0: 
+            for j in range(liste_carre_indisponible[i][1]):
+                localistation = []
+                localistation.append(liste_carre_indisponible[i][0])
+                localistation.append(j)
+                print("loc", localistation)
+                if localistation in liste_carre_disponible:
+                    #La condition ne marche pas mais je ne comprends pas pourquoi
+                    print("enfin")   
+                    liste_carre_disponible.append(liste_carre_indisponible[i])
+                    liste_carre_indisponible.remove(liste_carre_indisponible[i])
+                    liste_carre_indisponible.append(localistation)
+                    liste_carre_disponible.remove(localistation)
+                    
+            '''la fonction est pas encore parfaite mais j'ai un bon proto'''  
+    chiffre_dans_une_case()
+
 
 
 def bas():
@@ -116,13 +131,20 @@ for i in range(4):
 
 #Initialisation de la liste des carrés disponibles
 liste_carre_disponible = [(i,j) for i in range(4) for j in range(4)]
+liste_carre_indisponible = []
 
 def chiffre_dans_une_case():
     global liste_carre_disponible
     if liste_carre_disponible:
         # Choisir un carré aléatoire disponible
         choix = rd.choice(liste_carre_disponible)
+        liste_carre_indisponible.append(choix)
         liste_carre_disponible.remove(choix)
+        print("liste carré dipso", liste_carre_disponible)
+        print("liste pas dispo",liste_carre_indisponible)
+        if len(liste_carre_disponible) == 0:
+            print("-----------------\nDéfaite\nFermeture de la fenêtre\nVotre de score est de {}\n-----------------".format(score))
+            fenetre.quit()
         # Générer un "2" ou un "4" aléatoirement et l'afficher dans le carré choisi
         valeur_aleatoire = rd.choice([2]*9+[4])
         x1, y1, x2, y2 = liste_carre[choix[0] * 4 + choix[1]]
@@ -131,24 +153,16 @@ def chiffre_dans_une_case():
         canvas.create_text(x_centre, y_centre, text=valeur_aleatoire, font=("Arial", 24, "bold"))
 
 
-# La fonction qui détermine la direction
-def determine_direction():
-    if keyboard.is_pressed('d'):
-        return 'droite'
-    if keyboard.is_pressed('q'):
-        return 'gauche'
-    if keyboard.is_pressed('z'):
-        return 'haut'
-    if keyboard.is_pressed('s'):
-        return 'bas'
-
-
-direction = determine_direction()
-print(direction)
-
-
 # Ajouter le canevas à la fenêtre
 canvas.pack(expand=True)
+
+#Détéction de touches
+fenetre.bind('<z>', haut)
+fenetre.bind('<q>', gauche)
+fenetre.bind('<s>', bas)
+fenetre.bind('<d>', droite)
+'''Je comprend pas l'erreur sur la detect des touches'''
+
 
 # Execution des définitions:
 chiffre_dans_une_case()
